@@ -48,8 +48,9 @@ class Library():
     def return_book(self, book, author):
 
         if book in self.list_of_books:
-            if self.list_of_books is not None:
+            if self.lend_data is not None:
                 print(book, "Book returned by" , author)
+                self.lend_data[book] = None
 
             else:
                 print("The name of the book you entered is wrong or not from this library")
